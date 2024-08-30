@@ -79,6 +79,13 @@ const CanvasComponent = () => {
     ctx.arc(x, y, radius, 0, 2 * Math.PI);
     ctx.fillstyle = "#2dd4bf"
     ctx.font = '16px Arial';
+    ctx.textAlign = 'center';
+    ctx.fillText('date', x, y - 15);
+    ctx.font = ('bold 24px Arial');
+    ctx.fillText(auctionDate.getDate(), x,y + 5);
+    ctx.font = '16px Arial';
+    ctx.fillText(auctionDate.toLocaleString('default', { month: 'short' }), x, y + 25)
+    ctx.fillText(auctionDate.getFullYear(), x,y + 45)
 
     // Draw selected crops
     ctx.font = 'bold 48px Arial';
